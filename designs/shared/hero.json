@@ -1,0 +1,10 @@
+{
+  "wrapper-2col":     "py-22 px-[var(--konde-gutter)] border-b border-[var(--konde-border)] grid grid-cols-1 lg:grid-cols-2 gap-16 items-end",
+  "wrapper-centered": "py-22 px-[var(--konde-gutter)] border-b border-[var(--konde-border)] text-center",
+  "left":             "flex flex-col",
+  "right":            "flex flex-col gap-5",
+  "right-p":          "text-[17px] leading-[1.6] text-[var(--konde-ink-700)] m-0 max-w-[48ch]",
+  "actions":          "inline-flex gap-3 items-center flex-wrap mt-2",
+  "h1-green":         "text-[var(--konde-fs-h1)] font-bold leading-[1.04] tracking-[-0.025em] text-[var(--konde-green)] m-0",
+  "sub":              "block font-normal text-[clamp(20px,2.2vw,28px)] tracking-[-0.01em] text-[var(--konde-ink-700)] mt-[18px]"
+}

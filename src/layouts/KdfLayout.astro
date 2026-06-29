@@ -1,0 +1,133 @@
+---
+// KdfLayout.astro — /kdf page. 1:1 port of the kdf.html prototype: it reuses the
+// prototype's OWN stylesheet + page-local CSS (merged into konde.css) + Geist verbatim.
+// Not Tailwind/KDF — this is a distinct bespoke design, served exactly as designed.
+import "../../designs/konde-server.css";
+import "../../designs/konde.css";
+import { getLangFromUrl, alternates, getDirFromLang, useTranslations, type Lang } from "../i18n/ui";
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: Lang;
+  dir?: "ltr" | "rtl";
+}
+const {
+  title = "KDF — Konde Design Framework",
+  description = "KDF — a JSON-based design source of truth your agents read instead of guess. i18n moved text into JSON; KDF moves your design. Server-side, UI-library agnostic, MIT.",
+  lang = getLangFromUrl(Astro.url),
+  dir = getDirFromLang(lang),
+} = Astro.props;
+
+const t = useTranslations(lang);
+const site = Astro.site?.href ?? "https://konde.io";
+const canonical = new URL(Astro.url.pathname, site).href;
+const alts = alternates(Astro.url.pathname, site);
+const ogImageUrl = new URL("/og-image.png", site).href;
+
+// Structured data — SoftwareApplication describes KDF for search; FAQPage feeds
+// answer/generative engines (AEO/GEO) the Q&A they quote directly.
+const faq = t<{ q: string; a: string }[]>("kdf.faq");
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${site}kdf#software`,
+      name: "KDF — Konde Design Framework",
+      applicationCategory: "DeveloperApplication",
+      operatingSystem: "Node.js",
+      description,
+      url: canonical,
+      inLanguage: lang,
+      license: "https://opensource.org/licenses/MIT",
+      softwareVersion: "0.1.2",
+      downloadUrl: "https://www.npmjs.com/package/@kondeio/kdf",
+      sameAs: ["https://github.com/KondeIO/kdf"],
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      publisher: { "@type": "Organization", name: "Konde Studio", url: site },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${canonical}#faq`,
+      inLanguage: lang,
+      mainEntity: faq.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang={lang} dir={dir}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/konde-mark.svg" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+
+    <link rel="canonical" href={canonical} />
+    {alts.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Konde Studio" />
+    <meta property="og:locale" content={lang === "id" ? "id_ID" : "en_US"} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body class="type-compact page-kdf">
+    <slot />
+
+    <script src="/interactions.js" is:inline></script>
+    <script src="/particles.js" is:inline></script>
+    <script is:inline>
+      // copy-to-clipboard for install commands + hero pill
+      document.querySelectorAll("[data-copy]").forEach((el) => {
+        el.addEventListener("click", async () => {
+          try { await navigator.clipboard.writeText(el.dataset.copy); } catch (e) {}
+          el.classList.add("done");
+          const btn = el.matches(".copy");
+          const prev = btn ? el.textContent : null;
+          if (btn) el.textContent = "Copied";
+          clearTimeout(el._t);
+          el._t = setTimeout(() => { el.classList.remove("done"); if (btn) el.textContent = prev; }, 1600);
+        });
+      });
+      // mobile drawer (self-contained)
+      (function () {
+        const burger = document.getElementById("navBurger");
+        const drawer = document.getElementById("navDrawer");
+        const closeBtn = document.getElementById("navDrawerClose");
+        if (!burger || !drawer) return;
+        const toggle = (open) => {
+          const next = typeof open === "boolean" ? open : !drawer.classList.contains("open");
+          drawer.classList.toggle("open", next);
+          burger.classList.toggle("open", next);
+          burger.setAttribute("aria-expanded", String(next));
+          drawer.setAttribute("aria-hidden", String(!next));
+          document.body.style.overflow = next ? "hidden" : "";
+        };
+        burger.addEventListener("click", () => toggle());
+        if (closeBtn) closeBtn.addEventListener("click", () => toggle(false));
+        drawer.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => toggle(false)));
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape") toggle(false); });
+      })();
+    </script>
+  </body>
+</html>

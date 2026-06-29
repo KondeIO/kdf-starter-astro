@@ -1,0 +1,8 @@
+{
+  "free":   "inline-flex items-center gap-2 font-mono text-[12px] tracking-[0.12em] uppercase font-semibold px-3.5 py-1.5 rounded-full text-[var(--konde-green)] bg-[var(--konde-green-50)]",
+  "paid":   "inline-flex items-center gap-2 font-mono text-[12px] tracking-[0.12em] uppercase font-semibold px-3.5 py-1.5 rounded-full text-[var(--konde-ink-900)] bg-[var(--konde-cream-100)] border border-[var(--konde-border)]",
+  "mixed":  "inline-flex items-center gap-2 font-mono text-[12px] tracking-[0.12em] uppercase font-semibold px-3.5 py-1.5 rounded-full text-[var(--konde-green)] bg-[var(--konde-green-50)] border border-dashed border-[var(--konde-green)]",
+  "tag":    "inline-block font-mono text-[11px] tracking-[0.14em] uppercase text-[var(--konde-ink-700)] bg-[var(--konde-cream-100)] px-3 py-1 rounded-full",
+  "tag-green":"inline-block font-mono text-[11px] tracking-[0.14em] uppercase text-[var(--konde-green)] bg-[var(--konde-green-50)] px-3 py-1 rounded-full",
+  "live":   "inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.1em] uppercase font-semibold text-[var(--konde-green)] bg-[var(--konde-green-50)] border border-[var(--konde-green)] px-2 py-0.5 rounded-full"
+}

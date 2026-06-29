@@ -1,0 +1,10 @@
+{
+  "grid":         "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8",
+  "col":          "flex flex-col items-start",
+  "h5":           "font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--konde-ink-500)] m-0 mb-3.5 font-medium",
+  "link":         "inline-flex items-center gap-1.5 py-1.5 text-[14px] text-[var(--konde-ink-700)] no-underline hover:text-[var(--konde-green)] transition-colors",
+  "meta":         "mt-14 pt-6 border-t border-[var(--konde-border)] flex justify-between items-center gap-6 flex-wrap",
+  "brand":        "inline-flex items-center gap-3 text-[13px] text-[var(--konde-ink-500)]",
+  "social":       "inline-flex items-center gap-3.5",
+  "social-link":  "w-8 h-8 rounded-full inline-flex items-center justify-center text-[var(--konde-ink-500)] border border-[var(--konde-border)] bg-[var(--konde-surface)] no-underline hover:text-[var(--konde-ink-900)] hover:border-[var(--konde-ink-900)] transition-colors"
+}

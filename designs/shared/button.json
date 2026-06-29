@@ -1,0 +1,14 @@
+{
+  "base":            "inline-flex items-center gap-2 rounded-konde-pill font-medium leading-none whitespace-nowrap transition-colors no-underline cursor-pointer border",
+  "primary":         "bg-konde-green text-white border-konde-green hover:bg-konde-green-600 hover:border-konde-green-600",
+  "primary-strong":  "bg-konde-green text-white border-konde-green shadow-konde-md hover:bg-konde-green-600 hover:border-konde-green-600",
+  "outline":         "bg-transparent text-konde-ink-900 border-konde-ink-900 hover:bg-konde-ink-900 hover:text-konde-cream-50",
+  "outline-soft":    "bg-transparent text-konde-ink-900 border-konde-border hover:border-konde-ink-900",
+  "ghost":           "bg-transparent text-konde-ink-700 border-transparent hover:bg-konde-cream-100 hover:text-konde-ink-900",
+  "ink":             "bg-konde-ink-900 text-white border-konde-ink-900 hover:bg-konde-ink-800",
+  "disabled":        "bg-konde-cream-100 text-konde-ink-400 border-konde-border cursor-not-allowed",
+  "sm":              "h-9 px-4 text-ui-sm",
+  "md":              "h-11 px-5 text-body",
+  "lg":              "h-12 px-6 text-cta-lg",
+  "link":            "inline-flex items-center gap-1.5 text-body font-medium text-konde-ink-900 border-b border-konde-ink-900 no-underline pb-0.5 hover:text-konde-green-600 hover:border-konde-green-600 transition-colors"
+}

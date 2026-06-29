@@ -1,0 +1,4 @@
+{
+  "body":  "min-h-screen bg-konde-bg text-konde-ink-900 antialiased",
+  "main":  "max-w-[var(--konde-content-w)] mx-auto border-x border-konde-border bg-konde-bg"
+}

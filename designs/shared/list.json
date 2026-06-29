@@ -1,0 +1,11 @@
+{
+  "check-list":      "list-none p-0 m-0 mt-4 flex flex-col gap-3",
+  "check-list-li":   "text-[16px] leading-[1.55] text-[var(--konde-ink-700)] pl-6 relative before:content-['✓'] before:absolute before:left-0 before:top-0 before:text-[var(--konde-green)] before:font-bold before:text-[18px]",
+  "check-list-strong": "text-[var(--konde-ink-900)] font-semibold",
+  "step-list":       "list-none p-0 m-0 flex flex-col gap-4",
+  "step-list-li":    "grid grid-cols-[36px_1fr] gap-4 items-start",
+  "step-num":        "w-9 h-9 rounded-full bg-[var(--konde-green)] text-white font-bold text-[16px] inline-flex items-center justify-center shrink-0",
+  "step-body":       "text-[17px] leading-[1.6] text-[var(--konde-ink-700)] pt-1.5",
+  "bullet-list":     "list-none p-0 m-0 flex flex-col gap-2",
+  "bullet-list-li":  "text-[16px] leading-[1.5] text-[var(--konde-ink-700)] pl-3.5 relative before:content-['·'] before:absolute before:left-0 before:-top-0.5 before:text-[var(--konde-green)] before:text-[22px] before:font-bold"
+}

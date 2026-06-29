@@ -1,0 +1,33 @@
+---
+import "../styles/fonts.css";
+import interLatinWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import jetbrainsLatinWoff2 from "@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2?url";
+import kondeServerCss from "../../designs/konde-server.css?raw";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "KDF Starter Template",
+  description = "A clean, framework-agnostic starting point for KDF (Konde Design Framework).",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+
+    <link rel="preload" as="font" type="font/woff2" crossorigin href={interLatinWoff2} />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href={jetbrainsLatinWoff2} />
+    <style is:global set:html={kondeServerCss}></style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,178 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="KDF Starter Template">
+  <main class="kdf-starter">
+    <div class="hero">
+      <div class="badge">v0.1.3 Agnostic</div>
+      <h1>KDF <span>Starter</span></h1>
+      <p>Welcome to the <strong>Konde Design Framework</strong>. Zero CSS bloat, fully JSON-driven design system. Build highly maintainable UIs natively.</p>
+      
+      <div class="actions">
+        <a href="https://kdf.konde.io/docs" class="btn btn-primary">Read Documentation</a>
+        <a href="https://playground.konde.io/" class="btn btn-outline">Open Playground</a>
+      </div>
+    </div>
+    
+    <div class="features">
+      <div class="feature-card">
+        <h3>Design as JSON</h3>
+        <p>Your design tokens and logic are safely tucked away in structured JSON files. No more spaghetti class strings.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Framework Agnostic</h3>
+        <p>No Tailwind dependency required. Build with Astro, Next.js, or plain HTML. You own your rendering engine.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Solid Default Performance</h3>
+        <p>Server-rendered design tokens via inline CSS. Zero Flash of Unstyled Content (FOUC). Lightning fast.</p>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .kdf-starter {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--konde-gutter);
+    background: var(--konde-bg);
+    color: var(--konde-ink-900);
+    font-family: var(--konde-font-sans);
+  }
+
+  .hero {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 64px;
+    animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--konde-cream-200);
+    color: var(--konde-ink-600);
+    font-family: var(--konde-font-mono);
+    font-size: var(--konde-text-caption);
+    letter-spacing: var(--konde-track-tag);
+    text-transform: uppercase;
+    border-radius: var(--konde-radius-pill);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: var(--konde-text-display);
+    line-height: var(--konde-leading-tight);
+    letter-spacing: var(--konde-track-display);
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--konde-ink-900);
+  }
+
+  .hero h1 span {
+    color: var(--konde-green);
+  }
+
+  .hero p {
+    font-size: var(--konde-text-lede);
+    line-height: var(--konde-leading-loose);
+    color: var(--konde-ink-600);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+  }
+
+  .actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    height: 48px;
+    border-radius: var(--konde-radius-md);
+    font-size: var(--konde-text-ui);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary {
+    background: var(--konde-green);
+    color: #fff;
+    box-shadow: var(--konde-shadow-md);
+  }
+
+  .btn-primary:hover {
+    background: var(--konde-green-600);
+    transform: translateY(-2px);
+    box-shadow: var(--konde-shadow-lg);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--konde-ink-900);
+    border: 1px solid var(--konde-ink-200);
+  }
+
+  .btn-outline:hover {
+    background: var(--konde-cream-100);
+    border-color: var(--konde-ink-300);
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    width: 100%;
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .feature-card {
+    background: var(--konde-surface);
+    border: var(--konde-rail);
+    border-radius: var(--konde-radius-lg);
+    padding: 32px;
+    box-shadow: var(--konde-shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--konde-shadow-md);
+  }
+
+  .feature-card h3 {
+    font-size: var(--konde-text-h5);
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--konde-ink-900);
+  }
+
+  .feature-card p {
+    font-size: var(--konde-text-body-sm);
+    line-height: var(--konde-leading-relaxed);
+    color: var(--konde-ink-500);
+    margin: 0;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

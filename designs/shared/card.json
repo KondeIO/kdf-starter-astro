@@ -1,0 +1,8 @@
+{
+  "base":     "bg-[var(--konde-surface)] border border-[var(--konde-border)] rounded-[var(--konde-radius-md)] p-6",
+  "hover":    "transition-all hover:border-[var(--konde-green)] hover:-translate-y-0.5 hover:shadow-lg",
+  "elevated": "bg-[var(--konde-surface)] border border-[var(--konde-border)] rounded-[var(--konde-radius-lg)] p-7 shadow-sm",
+  "tinted":   "bg-[var(--konde-cream-100)] border border-[var(--konde-border)] rounded-[var(--konde-radius-md)] p-6",
+  "outline":  "bg-transparent border border-dashed border-[var(--konde-border)] rounded-[var(--konde-radius-md)] p-6",
+  "compare":  "bg-[var(--konde-surface)] border border-[var(--konde-border)] rounded-[var(--konde-radius-md)] p-7"
+}

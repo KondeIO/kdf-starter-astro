@@ -1,0 +1,19 @@
+{
+  "brand":          "inline-flex items-center no-underline",
+  "brand-img":      "h-6 w-auto block",
+  "center":         "hidden lg:flex gap-1 justify-center items-center",
+  "right":          "inline-flex items-center gap-1.5",
+  "link":           "inline-flex items-center gap-1 h-9 px-3 rounded-md text-[14px] font-medium leading-none text-[var(--konde-ink-700)] no-underline whitespace-nowrap hover:bg-[var(--konde-cream-100)] hover:text-[var(--konde-ink-900)] transition-colors",
+  "link-active":    "inline-flex items-center gap-1 h-9 px-3 rounded-md text-[14px] font-medium leading-none text-[var(--konde-ink-900)] no-underline whitespace-nowrap bg-[var(--konde-cream-100)]",
+  "split":          "h-9 inline-flex items-stretch overflow-hidden rounded-md hover:bg-[var(--konde-cream-100)]",
+  "split-label":    "inline-flex items-center px-3 pl-3 pr-1 text-[14px] font-medium leading-none text-[var(--konde-ink-700)] no-underline",
+  "split-chev":     "inline-flex items-center px-3 pr-3 pl-1.5 cursor-pointer border-none bg-transparent text-[var(--konde-ink-700)]",
+  "lang-btn":       "inline-flex items-center gap-1.5 h-9 px-2.5 rounded-md text-[13px] font-medium leading-none text-[var(--konde-ink-700)] bg-transparent border border-transparent hover:bg-[var(--konde-cream-100)] hover:text-[var(--konde-ink-900)]",
+  "cta-pill":       "inline-flex items-center gap-1.5 h-9 px-4 rounded-full bg-[var(--konde-green)] text-white text-[14px] font-medium leading-none no-underline whitespace-nowrap shrink-0 hover:bg-[var(--konde-green-600)] transition-colors",
+  "hamburger":      "lg:hidden inline-flex items-center justify-center w-9 h-9 rounded-md bg-transparent border-none cursor-pointer text-[var(--konde-ink-900)] hover:bg-[var(--konde-cream-100)]",
+  "dd-panel":       "absolute top-[calc(100%+6px)] left-0 min-w-[280px] bg-[var(--konde-surface)] border border-[var(--konde-border)] rounded-lg shadow-xl p-2 z-50",
+  "dd-panel-right": "absolute top-[calc(100%+6px)] right-0 min-w-[110px] bg-[var(--konde-surface)] border border-[var(--konde-border)] rounded-lg shadow-xl p-1.5 z-50",
+  "dd-item":        "flex flex-col gap-0.5 px-3 py-2.5 rounded text-[var(--konde-ink-900)] no-underline cursor-pointer hover:bg-[var(--konde-cream-100)]",
+  "dd-item-label":  "text-[14px] font-medium text-[var(--konde-ink-900)]",
+  "dd-item-desc":   "text-[12px] text-[var(--konde-ink-500)]"
+}
