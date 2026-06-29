@@ -1,0 +1,17 @@
+# Konde Design Framework (KDF) Playground
+
+> An interactive playground for the Konde Design Framework (KDF). Edit JSON design tokens and instantly preview beautifully rendered UI components.
+
+KDF Playground allows AI agents and human developers to collaborate on UI design by editing raw JSON configurations that are compiled into Tailwind CSS components.
+
+## Core Pages
+- [Playground](https://playground.konde.io/)
+- [Konde Studio Homepage](https://konde.io/)
+
+## Developer Resources & Documentation
+- [Repository README](https://github.com/KondeIO/konde-io/blob/main/README.md)
+- [Technical Docs](https://github.com/KondeIO/konde-io/tree/main/docs)
+
+## Socials
+- [GitHub](https://github.com/KondeIO)
+- [X (Twitter)](https://x.com/KondeIO)

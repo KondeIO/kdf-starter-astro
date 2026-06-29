@@ -3,6 +3,10 @@ import "../styles/fonts.css";
 import interLatinWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
 import jetbrainsLatinWoff2 from "@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2?url";
 import kondeServerCss from "../../designs/konde-server.css?raw";
+import { createDesign } from "@kondeio/kdf";
+import layoutTokens from "../../designs/layout.json";
+
+const d = createDesign(layoutTokens);
 
 interface Props {
   title?: string;
@@ -21,13 +25,27 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/og-image.png" />
+
     <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <link rel="preload" as="font" type="font/woff2" crossorigin href={interLatinWoff2} />
     <link rel="preload" as="font" type="font/woff2" crossorigin href={jetbrainsLatinWoff2} />
     <style is:global set:html={kondeServerCss}></style>
   </head>
-  <body>
+  <body class={d("body")}>
     <slot />
   </body>
 </html>

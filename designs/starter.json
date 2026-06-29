@@ -1,0 +1,20 @@
+{
+  "main": "kdf-starter",
+  "hero": {
+    "root": "hero",
+    "badge": "badge",
+    "title": "hero-title",
+    "text": "hero-text",
+    "actions": "actions"
+  },
+  "btn": {
+    "primary": "btn btn-primary",
+    "outline": "btn btn-outline"
+  },
+  "features": {
+    "grid": "features",
+    "card": "feature-card",
+    "title": "feature-title",
+    "desc": "feature-desc"
+  }
+}

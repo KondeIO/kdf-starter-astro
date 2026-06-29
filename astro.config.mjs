@@ -1,11 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 const DEV_PORT = Number.parseInt(process.env.PORT || '3032', 10) || 3032;
 
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://konde.io',
+  integrations: [sitemap()],
   server: {
     host: true, // Required for Konde Studio tunnel/proxy
     port: DEV_PORT,

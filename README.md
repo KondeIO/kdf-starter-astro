@@ -1,46 +1,54 @@
-# Astro Starter Kit: Basics
+# KDF Starter Template
 
-```sh
-npm create astro@latest -- --template basics
-```
+A clean, minimal, framework-agnostic starting point for **KDF (Konde Design Framework)** built with Astro.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![Deploy to Cloudflare Pages](https://cloudflare-pages.com/deploy/button.svg)](https://pages.cloudflare.com/deploy)
 
-## 🚀 Project Structure
+## 🚀 Features
+- **KDF Native**: Uses `@kondeio/kdf` to map JSON design tokens seamlessly.
+- **Framework Agnostic**: No Tailwind required, yet fully supports utility-class patterns.
+- **SEO Ready**: Configured with Canonical URLs, Open Graph, Twitter cards, and auto-generated Sitemap.
+- **AI Ready**: Ships with `llms.txt` and `llms-full.txt` (AEO/GEO optimized).
+- **Fast**: Zero JS overhead, static HTML output.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠 Project Structure
 
 ```text
 /
+├── designs/
+│   ├── kdf.json         # Core KDF dictionary mapping
+│   ├── starter.json     # Starter template component mapping
+│   ├── layout.json      # Layout wrapper mapping
+│   └── konde-server.css # Pre-compiled CSS properties
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   ├── favicon.svg      # Favicon
+│   ├── llms.txt         # AI context
+│   └── robots.txt       # Search engine directives
+├── src/
+│   ├── layouts/
+│   │   └── Layout.astro # Base HTML layout wrapping KDF
+│   └── pages/
+│       └── index.astro  # Homepage using starter.json tokens
+├── astro.config.mjs     # Astro configuration (Sitemap, KDF define)
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `pnpm install`            | Installs dependencies                            |
+| `pnpm run dev`            | Starts local dev server                          |
+| `pnpm run build`          | Build your production site to `./dist/`          |
+| `pnpm run preview`        | Preview your build locally                       |
 
-## 👀 Want to learn more?
+## 📖 Learn More
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Read the documentation: [Konde.io Docs](https://konde.io/kdf/docs)
+- Interactive KDF Playground: [Playground](https://playground.konde.io)
+
+## 📄 License
+
+MIT License. See `LICENSE` for more information.
