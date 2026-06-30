@@ -42,7 +42,7 @@
 
 .kdf-hero {
   position: relative;
-  padding: 160px 24px 100px;
+  padding: 100px 24px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -306,7 +306,7 @@
 .kdf-about-section-title { font-size: 24px; font-weight: 700; margin-bottom: 16px; color: var(--konde-ink-900); }
 .kdf-about-section-text { font-size: 16px; line-height: 1.6; color: var(--konde-ink-600); }
 
-.kdf-footer-brand-margin { margin-bottom: 16px; display: inline-block; }
+.kdf-footer-brand-margin { margin-bottom: 16px; display: inline-flex; }
 .kdf-footer-desc { color: var(--konde-ink-600); font-size: 14px; line-height: 1.6; max-width: 240px; }
 .kdf-footer-col-title { font-weight: 600; font-size: 14px; margin-bottom: 16px; color: var(--konde-ink-900); }
 .kdf-footer-link-list { display: flex; flex-direction: column; gap: 12px; }
@@ -315,14 +315,17 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .kdf-nav-brand-text {
+    display: none;
+  }
   .kdf-nav {
     padding: 0 16px;
   }
   .kdf-nav-links {
-    gap: 16px;
+    gap: 12px;
   }
   .kdf-hero {
-    padding: 120px 16px 60px;
+    padding: 60px 16px 60px;
   }
   .kdf-title {
     font-size: clamp(32px, 8vw, 48px);
@@ -334,11 +337,15 @@
   }
   .kdf-actions {
     flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 280px;
+    margin: 0 auto;
+    gap: 12px;
   }
   .kdf-actions .kdf-btn {
     width: 100%;
+    box-sizing: border-box;
   }
   
   .kdf-grid {
