@@ -7,7 +7,7 @@ const DEV_PORT = Number.parseInt(process.env.PORT || '3032', 10) || 3032;
 
 export default defineConfig({
   // Replace with your actual production domain for sitemap generation
-  site: process.env.SITE || 'https://example.com',
+  site: process.env.SITE || 'https://starter.konde.io',
   integrations: [sitemap()],
   server: {
     host: true, // Required for Konde Studio tunnel/proxy
