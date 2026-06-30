@@ -2,16 +2,16 @@
 
 A clean, minimal, framework-agnostic starting point for **KDF (Konde Design Framework)** built with Astro.
 
-[![Deploy to Cloudflare Pages](https://cloudflare-pages.com/deploy/button.svg)](https://deploy.workers.cloudflare.com/?url=https://github.com/KondeIO/kdf-starter-astro)
+[![Deploy to Cloudflare Pages](https://pages.cloudflare.com/deploy/button.svg)](https://deploy.workers.cloudflare.com/?url=https://github.com/KondeIO/kdf-starter-astro)
 
-## 🚀 Features
+## Features
 - **KDF Native**: Uses `@kondeio/kdf` to map JSON design tokens seamlessly.
 - **Framework Agnostic**: No Tailwind required, yet fully supports utility-class patterns.
 - **SEO Ready**: Configured with Canonical URLs, Open Graph, Twitter cards, and auto-generated Sitemap.
 - **AI Ready**: Ships with `llms.txt` and `llms-full.txt` (AEO/GEO optimized).
 - **Fast**: Zero JS overhead, static HTML output.
 
-## 🛠 Project Structure
+## Project Structure
 
 ```text
 /
@@ -33,7 +33,7 @@ A clean, minimal, framework-agnostic starting point for **KDF (Konde Design Fram
 └── package.json
 ```
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project:
 
@@ -44,11 +44,11 @@ All commands are run from the root of the project:
 | `pnpm run build`          | Build your production site to `./dist/`          |
 | `pnpm run preview`        | Preview your build locally                       |
 
-## 📖 Learn More
+## Learn More
 
 - Read the documentation: [Konde.io Docs](https://github.com/KondeIO/kdf/blob/main/docs/doc.md)
 - Interactive KDF Playground: [Playground](https://playground.konde.io)
 
-## 📄 License
+## License
 
 MIT License. See `LICENSE` for more information.
