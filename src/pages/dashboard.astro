@@ -1,0 +1,73 @@
+---
+import { createDesign } from "@kondeio/kdf";
+import starterTokens from "../../designs/starter.json";
+import "../styles/premium.css";
+
+const d = createDesign(starterTokens);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard Preview - KDF Starter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body { margin: 0; font-family: 'Inter', sans-serif; }
+    </style>
+  </head>
+  <body>
+    <div data-kdf="dashboard.layout" class={d("dashboard.layout")}>
+      <!-- Sidebar -->
+      <aside data-kdf="dashboard.sidebar" class={d("dashboard.sidebar")}>
+        <div data-kdf="dashboard.sidebarBrand" class={d("dashboard.sidebarBrand")}>KDF Admin</div>
+        
+        <a data-kdf="dashboard.sidebarLinkActive" href="#" class={d("dashboard.sidebarLinkActive")}>
+          Overview
+        </a>
+        <a data-kdf="dashboard.sidebarLink" href="#" class={d("dashboard.sidebarLink")}>Analytics</a>
+        <a data-kdf="dashboard.sidebarLink" href="#" class={d("dashboard.sidebarLink")}>Settings</a>
+        
+        <div data-kdf="dashboard.sidebarBottom" class={d("dashboard.sidebarBottom")}>
+          <a data-kdf="dashboard.sidebarBack" href="/" class={d("dashboard.sidebarBack")}>
+            &larr; Back to Site
+          </a>
+        </div>
+      </aside>
+      
+      <!-- Main Content -->
+      <main data-kdf="dashboard.main" class={d("dashboard.main")}>
+        <div data-kdf="dashboard.header" class={d("dashboard.header")}>
+          <h1 data-kdf="dashboard.headerTitle" class={d("dashboard.headerTitle")}>Dashboard Overview</h1>
+          <button data-kdf="dashboard.headerBtn" class={`${d("btn.primary")} ${d("dashboard.headerBtn")}`}>Download Report</button>
+        </div>
+        
+        <div data-kdf="dashboard.stats" class={d("dashboard.stats")}>
+          <div data-kdf="dashboard.statCard" class={d("dashboard.statCard")}>
+            <div data-kdf="dashboard.statLabel" class={d("dashboard.statLabel")}>Total Users</div>
+            <div data-kdf="dashboard.statValue" class={d("dashboard.statValue")}>24,592</div>
+            <div data-kdf="dashboard.statTrendUp" class={d("dashboard.statTrendUp")}>+12% from last month</div>
+          </div>
+          <div data-kdf="dashboard.statCard" class={d("dashboard.statCard")}>
+            <div data-kdf="dashboard.statLabel" class={d("dashboard.statLabel")}>Revenue</div>
+            <div data-kdf="dashboard.statValue" class={d("dashboard.statValue")}>$12.4k</div>
+            <div data-kdf="dashboard.statTrendUp" class={d("dashboard.statTrendUp")}>+4.2% from last month</div>
+          </div>
+          <div data-kdf="dashboard.statCard" class={d("dashboard.statCard")}>
+            <div data-kdf="dashboard.statLabel" class={d("dashboard.statLabel")}>Active Sessions</div>
+            <div data-kdf="dashboard.statValue" class={d("dashboard.statValue")}>1,204</div>
+            <div data-kdf="dashboard.statTrendDown" class={d("dashboard.statTrendDown")}>-2.1% from last month</div>
+          </div>
+        </div>
+        
+        <div data-kdf="dashboard.activity" class={d("dashboard.activity")}>
+          <h2 data-kdf="dashboard.activityTitle" class={d("dashboard.activityTitle")}>Recent Activity</h2>
+          <div data-kdf="dashboard.activityChart" class={d("dashboard.activityChart")}>
+            Chart Placeholder
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

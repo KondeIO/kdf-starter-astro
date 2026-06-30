@@ -1,182 +1,93 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 import { createDesign } from "@kondeio/kdf";
 import starterTokens from "../../designs/starter.json";
 
 const d = createDesign(starterTokens);
 ---
 
-<Layout title="KDF Starter Template">
-  <main class={d("main")}>
-    <div class={d("hero.root")}>
-      <div class={d("hero.badge")}>v0.1.3 Agnostic</div>
-      <h1 class={d("hero.title")}>KDF <span>Starter</span></h1>
-      <p class={d("hero.text")}>Welcome to the <strong>Konde Design Framework</strong>. Zero CSS bloat, fully JSON-driven design system. Build highly maintainable UIs natively.</p>
+<Layout title="KDF - The Ultimate JSON Design Engine">
+  <Navbar />
+  
+  <main data-kdf="layout.main" class={d("layout.main")}>
+    <section data-kdf="hero.section" class={d("hero.section")}>
+      <div data-kdf="hero.bg" class={d("hero.bg")}></div>
       
-      <div class={d("hero.actions")}>
-        <a href="https://konde.io/kdf/docs" class={d("btn.primary")}>Read Documentation</a>
-        <a href="https://playground.konde.io/" class={d("btn.outline")}>Open Playground</a>
+      <div data-kdf="hero.badge" class={d("hero.badge")}>
+        <svg data-kdf="hero.badgeIcon" class={d("hero.badgeIcon")} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+        </svg>
+        KDF v0.1.3 is out now
       </div>
-    </div>
+      
+      <h1 data-kdf="hero.title" class={d("hero.title")}>
+        Design as <span data-kdf="hero.titleHighlight" class={d("hero.titleHighlight")}>Data</span>, <br/>Rendered Anywhere.
+      </h1>
+      
+      <p data-kdf="hero.subtitle" class={d("hero.subtitle")}>
+        The first truly framework-agnostic design engine. Write your design system as pure JSON tokens and deploy it to Astro, Next.js, or raw HTML with zero CSS bloat.
+      </p>
+      
+      <div data-kdf="hero.actions" class={d("hero.actions")}>
+        <a data-kdf="btn.primary" href="https://github.com/KondeIO/kdf/blob/main/docs/doc.md" class={d("btn.primary")} target="_blank" rel="noopener noreferrer">
+          Get Started
+          <svg data-kdf="btn.primaryIcon" class={d("btn.primaryIcon")} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a data-kdf="btn.outline" href="https://playground.konde.io/" class={d("btn.outline")} target="_blank" rel="noopener noreferrer">
+          Open Playground
+        </a>
+      </div>
+    </section>
     
-    <div class={d("features.grid")}>
-      <div class={d("features.card")}>
-        <h3 class={d("features.title")}>Design as JSON</h3>
-        <p class={d("features.desc")}>Your design tokens and logic are safely tucked away in structured JSON files. No more spaghetti class strings.</p>
+    <section data-kdf="grid.features" class={d("grid.features")}>
+      <div data-kdf="card.feature" class={d("card.feature")}>
+        <div data-kdf="card.icon" class={d("card.icon")}>
+          <svg data-kdf="card.iconSvg" class={d("card.iconSvg")} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          </svg>
+        </div>
+        <h3 data-kdf="card.title" class={d("card.title")}>JSON Driven</h3>
+        <p data-kdf="card.desc" class={d("card.desc")}>
+          Your complete design system—colors, spacing, components, and animations—lives in a structured, typed JSON dictionary.
+        </p>
       </div>
-      <div class={d("features.card")}>
-        <h3 class={d("features.title")}>Framework Agnostic</h3>
-        <p class={d("features.desc")}>No Tailwind dependency required. Build with Astro, Next.js, or plain HTML. You own your rendering engine.</p>
+      
+      <div data-kdf="card.feature" class={d("card.feature")}>
+        <div data-kdf="card.icon" class={d("card.icon")}>
+          <svg data-kdf="card.iconSvg" class={d("card.iconSvg")} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <h3 data-kdf="card.title" class={d("card.title")}>Framework Agnostic</h3>
+        <p data-kdf="card.desc" class={d("card.desc")}>
+          No Tailwind dependency required. Build with Astro, React, Vue, or Vanilla JS. The KDF engine maps tokens directly to your chosen renderer.
+        </p>
       </div>
-      <div class={d("features.card")}>
-        <h3 class={d("features.title")}>Solid Default Performance</h3>
-        <p class={d("features.desc")}>Server-rendered design tokens via inline CSS. Zero Flash of Unstyled Content (FOUC). Lightning fast.</p>
+      
+      <div data-kdf="card.feature" class={d("card.feature")}>
+        <div data-kdf="card.icon" class={d("card.icon")}>
+          <svg data-kdf="card.iconSvg" class={d("card.iconSvg")} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+        </div>
+        <h3 data-kdf="card.title" class={d("card.title")}>Extreme Performance</h3>
+        <p data-kdf="card.desc" class={d("card.desc")}>
+          Server-rendered design tokens output standard inline CSS classes. Zero Flash of Unstyled Content (FOUC). Native DOM performance.
+        </p>
       </div>
-    </div>
+    </section>
   </main>
+  
+  <Footer />
 </Layout>
 
-<style>
-  .kdf-starter {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--konde-gutter);
-    background: var(--konde-bg);
-    color: var(--konde-ink-900);
-    font-family: var(--konde-font-sans);
-  }
-
-  .hero {
-    max-width: 800px;
-    text-align: center;
-    margin-bottom: 64px;
-    animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .badge {
-    display: inline-block;
-    padding: 4px 12px;
-    background: var(--konde-cream-200);
-    color: var(--konde-ink-600);
-    font-family: var(--konde-font-mono);
-    font-size: var(--konde-text-caption);
-    letter-spacing: var(--konde-track-tag);
-    text-transform: uppercase;
-    border-radius: var(--konde-radius-pill);
-    margin-bottom: 24px;
-  }
-
-  .hero h1 {
-    font-size: var(--konde-text-display);
-    line-height: var(--konde-leading-tight);
-    letter-spacing: var(--konde-track-display);
-    font-weight: 600;
-    margin-bottom: 24px;
-    color: var(--konde-ink-900);
-  }
-
-  .hero h1 span {
-    color: var(--konde-green);
-  }
-
-  .hero p {
-    font-size: var(--konde-text-lede);
-    line-height: var(--konde-leading-loose);
-    color: var(--konde-ink-600);
-    max-width: 600px;
-    margin: 0 auto 40px auto;
-  }
-
-  .actions {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 24px;
-    height: 48px;
-    border-radius: var(--konde-radius-md);
-    font-size: var(--konde-text-ui);
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-
-  .btn-primary {
-    background: var(--konde-green);
-    color: #fff;
-    box-shadow: var(--konde-shadow-md);
-  }
-
-  .btn-primary:hover {
-    background: var(--konde-green-600);
-    transform: translateY(-2px);
-    box-shadow: var(--konde-shadow-lg);
-  }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--konde-ink-900);
-    border: 1px solid var(--konde-ink-200);
-  }
-
-  .btn-outline:hover {
-    background: var(--konde-cream-100);
-    border-color: var(--konde-ink-300);
-  }
-
-  .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    max-width: 1000px;
-    width: 100%;
-    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .feature-card {
-    background: var(--konde-surface);
-    border: var(--konde-rail);
-    border-radius: var(--konde-radius-lg);
-    padding: 32px;
-    box-shadow: var(--konde-shadow-sm);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--konde-shadow-md);
-  }
-
-  .feature-card h3 {
-    font-size: var(--konde-text-h5);
-    font-weight: 600;
-    margin-bottom: 12px;
-    color: var(--konde-ink-900);
-  }
-
-  .feature-card p {
-    font-size: var(--konde-text-body-sm);
-    line-height: var(--konde-leading-relaxed);
-    color: var(--konde-ink-500);
-    margin: 0;
-  }
-
+<style is:global>
   @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>

@@ -1,0 +1,62 @@
+---
+import { createDesign } from "@kondeio/kdf";
+import starterTokens from "../../designs/starter.json";
+
+const d = createDesign(starterTokens);
+---
+
+<footer data-kdf="footer.root" class={d("footer.root")}>
+  <div data-kdf="footer.grid" class={d("footer.grid")}>
+    <div>
+      <a data-kdf="nav.brand" href="/" class={`${d("nav.brand")} ${d("footer.brandMargin")}`}>
+        <svg width="32" height="32" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #10b981; flex-shrink: 0;">
+          <circle cx="35" cy="35" r="35" fill="currentColor"></circle>
+          <g fill="#FFFFFF">
+            <path d="M36.29,30c1.95.51,3.42,2.13,3.76,4.12l.13.79,17.31-8.28c-.74-2.02-1.75-3.92-2.97-5.64l-10.66,5.42,5.41-10.82c-1.69-1.26-3.55-2.3-5.53-3.09l-8.16,17.32.7.18Z"></path>
+            <path d="M40.19,35.09l-.13.79c-.34,2-1.82,3.61-3.76,4.12l-.7.18,8.16,17.32c1.99-.79,3.86-1.83,5.55-3.1l-5.42-10.82,10.66,5.42c1.22-1.72,2.22-3.61,2.96-5.62l-17.31-8.28Z"></path>
+            <path d="M29.95,34.12c.34-2,1.81-3.61,3.76-4.12l.7-.18-8.16-17.32c-1.99.78-3.85,1.82-5.53,3.09l5.41,10.82-10.66-5.42c-1.22,1.73-2.23,3.62-2.97,5.64l17.31,8.28.13-.79Z"></path>
+            <path d="M33.71,40c-1.95-.51-3.42-2.13-3.76-4.12l-.13-.79-17.31,8.28c.74,2.02,1.74,3.9,2.96,5.62l10.66-5.42-5.42,10.82c1.69,1.27,3.56,2.31,5.55,3.1l8.16-17.32-.7-.18Z"></path>
+          </g>
+        </svg>
+        <span>Konde Design Framework</span>
+      </a>
+      <p data-kdf="footer.desc" class={d("footer.desc")}>
+        A framework-agnostic design engine that lets you write styles as JSON and compile them anywhere.
+      </p>
+    </div>
+    
+    <div>
+      <h4 data-kdf="footer.colTitle" class={d("footer.colTitle")}>Product</h4>
+      <div data-kdf="footer.linkList" class={d("footer.linkList")}>
+        <a data-kdf="nav.link" href="https://konde.io/kdf" class={d("nav.link")} target="_blank" rel="noopener noreferrer">Features</a>
+        <a data-kdf="nav.link" href="https://playground.konde.io" class={d("nav.link")} target="_blank" rel="noopener noreferrer">Playground</a>
+        <a data-kdf="nav.link" href="https://github.com/KondeIO/kdf/blob/main/docs/doc.md" class={d("nav.link")} target="_blank" rel="noopener noreferrer">Documentation</a>
+      </div>
+    </div>
+
+    <div>
+      <h4 data-kdf="footer.colTitle" class={d("footer.colTitle")}>Company</h4>
+      <div data-kdf="footer.linkList" class={d("footer.linkList")}>
+        <a data-kdf="nav.link" href="/about" class={d("nav.link")}>About Us</a>
+        <a data-kdf="nav.link" href="#" class={d("nav.link")}>Careers</a>
+        <a data-kdf="nav.link" href="#" class={d("nav.link")}>Blog</a>
+      </div>
+    </div>
+
+    <div>
+      <h4 data-kdf="footer.colTitle" class={d("footer.colTitle")}>Legal</h4>
+      <div data-kdf="footer.linkList" class={d("footer.linkList")}>
+        <a data-kdf="nav.link" href="#" class={d("nav.link")}>Privacy Policy</a>
+        <a data-kdf="nav.link" href="#" class={d("nav.link")}>Terms of Service</a>
+      </div>
+    </div>
+  </div>
+  
+  <div data-kdf="footer.bottom" class={d("footer.bottom")}>
+    <div data-kdf="footer.copyright" class={d("footer.copyright")}>&copy; {new Date().getFullYear()} Konde.io. All rights reserved.</div>
+    <div data-kdf="footer.socials" class={d("footer.socials")}>
+      <a data-kdf="nav.link" href="https://github.com/KondeIO" class={d("nav.link")} target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a data-kdf="nav.link" href="https://twitter.com/kondeio" class={d("nav.link")} target="_blank" rel="noopener noreferrer">Twitter</a>
+    </div>
+  </div>
+</footer>

@@ -5,6 +5,7 @@ import jetbrainsLatinWoff2 from "@fontsource-variable/jetbrains-mono/files/jetbr
 import kondeServerCss from "../../designs/konde-server.css?raw";
 import { createDesign } from "@kondeio/kdf";
 import layoutTokens from "../../designs/layout.json";
+import "../styles/premium.css";
 
 const d = createDesign(layoutTokens);
 
@@ -45,7 +46,7 @@ const {
     <link rel="preload" as="font" type="font/woff2" crossorigin href={jetbrainsLatinWoff2} />
     <style is:global set:html={kondeServerCss}></style>
   </head>
-  <body class={d("body")}>
+  <body data-kdf="body" class={d("body")}>
     <slot />
   </body>
 </html>

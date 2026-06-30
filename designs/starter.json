@@ -1,20 +1,81 @@
 {
-  "main": "kdf-starter",
+  "layout": {
+    "main": "kdf-main",
+    "page": "kdf-page"
+  },
+  "nav": {
+    "root": "kdf-nav",
+    "brand": "kdf-brand",
+    "links": "kdf-nav-links",
+    "link": "kdf-nav-link",
+    "icon": "kdf-nav-icon"
+  },
   "hero": {
-    "root": "hero",
-    "badge": "badge",
-    "title": "hero-title",
-    "text": "hero-text",
-    "actions": "actions"
+    "section": "kdf-hero",
+    "bg": "kdf-hero-bg",
+    "badge": "kdf-badge",
+    "badgeIcon": "kdf-badge-icon",
+    "title": "kdf-title",
+    "titleHighlight": "kdf-title-highlight",
+    "subtitle": "kdf-subtitle",
+    "actions": "kdf-actions"
   },
   "btn": {
-    "primary": "btn btn-primary",
-    "outline": "btn btn-outline"
+    "primary": "kdf-btn kdf-btn-primary",
+    "primaryIcon": "kdf-btn-icon",
+    "outline": "kdf-btn kdf-btn-outline",
+    "github": "kdf-btn kdf-btn-github",
+    "githubIcon": "kdf-btn-github-icon"
   },
-  "features": {
-    "grid": "features",
-    "card": "feature-card",
-    "title": "feature-title",
-    "desc": "feature-desc"
+  "grid": {
+    "features": "kdf-grid"
+  },
+  "card": {
+    "feature": "kdf-card",
+    "icon": "kdf-card-icon",
+    "iconSvg": "kdf-card-svg",
+    "title": "kdf-card-title",
+    "desc": "kdf-card-desc"
+  },
+  "dashboard": {
+    "layout": "kdf-dash-layout",
+    "sidebar": "kdf-dash-sidebar",
+    "sidebarBrand": "kdf-dash-sidebar-brand",
+    "sidebarLinkActive": "kdf-dash-sidebar-link-active",
+    "sidebarLink": "kdf-dash-sidebar-link",
+    "sidebarBottom": "kdf-dash-sidebar-bottom",
+    "sidebarBack": "kdf-dash-sidebar-back",
+    "main": "kdf-dash-main",
+    "header": "kdf-dash-header",
+    "headerTitle": "kdf-dash-header-title",
+    "headerBtn": "kdf-dash-header-btn",
+    "stats": "kdf-dash-stats",
+    "statCard": "kdf-stat-card",
+    "statLabel": "kdf-stat-label",
+    "statValue": "kdf-stat-value",
+    "statTrendUp": "kdf-stat-trend-up",
+    "statTrendDown": "kdf-stat-trend-down",
+    "activity": "kdf-activity",
+    "activityTitle": "kdf-activity-title",
+    "activityChart": "kdf-activity-chart"
+  },
+  "about": {
+    "container": "kdf-about-container",
+    "title": "kdf-about-title",
+    "subtitle": "kdf-about-subtitle",
+    "grid": "kdf-about-grid",
+    "sectionTitle": "kdf-about-section-title",
+    "sectionText": "kdf-about-section-text"
+  },
+  "footer": {
+    "root": "kdf-footer",
+    "grid": "kdf-footer-grid",
+    "brandMargin": "kdf-footer-brand-margin",
+    "desc": "kdf-footer-desc",
+    "colTitle": "kdf-footer-col-title",
+    "linkList": "kdf-footer-link-list",
+    "bottom": "kdf-footer-bottom",
+    "copyright": "kdf-footer-copyright",
+    "socials": "kdf-footer-socials"
   }
 }

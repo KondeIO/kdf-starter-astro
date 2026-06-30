@@ -46,7 +46,7 @@ All commands are run from the root of the project:
 
 ## 📖 Learn More
 
-- Read the documentation: [Konde.io Docs](https://konde.io/kdf/docs)
+- Read the documentation: [Konde.io Docs](https://github.com/KondeIO/kdf/blob/main/docs/doc.md)
 - Interactive KDF Playground: [Playground](https://playground.konde.io)
 
 ## 📄 License

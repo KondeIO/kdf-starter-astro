@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { createDesign } from "@kondeio/kdf";
+import starterTokens from "../../designs/starter.json";
+
+const d = createDesign(starterTokens);
+---
+
+<Layout title="About - KDF Starter Template">
+  <Navbar />
+  
+  <main data-kdf="layout.page" class={d("layout.page")}>
+    <div data-kdf="about.container" class={d("about.container")}>
+      <h1 data-kdf="about.title" class={`${d("hero.title")} ${d("about.title")}`}>About Us</h1>
+      <p data-kdf="about.subtitle" class={`${d("hero.subtitle")} ${d("about.subtitle")}`}>
+        We are building the future of design systems. Konde Design Framework (KDF) was born out of the frustration with bloated CSS bundles and difficult-to-maintain class strings.
+      </p>
+      
+      <div data-kdf="about.grid" class={d("about.grid")}>
+        <div>
+          <h3 data-kdf="about.sectionTitle" class={d("about.sectionTitle")}>Our Mission</h3>
+          <p data-kdf="about.sectionText" class={d("about.sectionText")}>
+            To make styling truly framework-agnostic. Design tokens should be portable data, not tightly coupled strings or proprietary components. By using JSON dictionaries, KDF allows you to bring your exact design system to Astro, React, Vue, or Vanilla HTML instantly.
+          </p>
+        </div>
+        <div>
+          <h3 data-kdf="about.sectionTitle" class={d("about.sectionTitle")}>Open Source</h3>
+          <p data-kdf="about.sectionText" class={d("about.sectionText")}>
+            We believe in open standards. The core KDF engine and this starter template are fully open source. Build your next SaaS, blog, or enterprise app without worrying about vendor lock-in.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
