@@ -1,17 +1,17 @@
-# Konde Design Framework (KDF) Playground
+# KDF Starter Astro
 
-> An interactive playground for the Konde Design Framework (KDF). Edit JSON design tokens and instantly preview beautifully rendered UI components.
+> A clean, minimal, framework-agnostic starting point for Konde Design Framework (KDF) built with Astro.
 
-KDF Playground allows AI agents and human developers to collaborate on UI design by editing raw JSON configurations that are compiled into Tailwind CSS components.
+KDF Starter Astro allows AI agents and human developers to build unified, lightweight, and blazing fast websites using JSON design tokens mapped via the KDF engine.
 
-## Core Pages
-- [Playground](https://playground.konde.io/)
-- [Konde Studio Homepage](https://konde.io/)
+## Core Resources
+- [Standalone Repository](https://github.com/KondeIO/kdf-starter-astro)
+- [Monorepo Repository](https://github.com/KondeIO/konde-io)
 
-## Developer Resources & Documentation
-- [Repository README](https://github.com/KondeIO/konde-io/blob/main/README.md)
-- [Technical Docs](https://github.com/KondeIO/konde-io/tree/main/docs)
+## Developer Documentation
+- [KDF Core Documentation](https://github.com/KondeIO/kdf/blob/main/docs/doc.md)
+- [Interactive KDF Playground](https://playground.konde.io/)
 
-## Socials
-- [GitHub](https://github.com/KondeIO)
-- [X (Twitter)](https://x.com/KondeIO)
+## Brand & Framework Links
+- [Konde Studio](https://konde.io/)
+- [GitHub Organization](https://github.com/KondeIO)

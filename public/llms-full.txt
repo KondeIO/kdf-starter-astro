@@ -1,40 +1,29 @@
-# Konde Design Framework (KDF) Playground - Full Documentation
+# KDF Starter Astro - Full Documentation
 
-## About KDF Playground
-The KDF Playground is an interactive, web-based tool designed to help developers and AI agents experiment with the Konde Design Framework (KDF). It allows users to write raw JSON configuration (design tokens) and instantly preview how those tokens are compiled and rendered into beautiful, Tailwind CSS-powered UI components.
+## About KDF Starter Astro
+KDF Starter Astro is a framework-agnostic starting template designed for building websites using the Konde Design Framework (KDF) and Astro. It outputs strictly optimized static HTML and inline styles mapped from structured JSON design tokens.
 
 ## What is KDF?
-The Konde Design Framework is a unified design system that enables rapid, consistent, and beautiful UI development across the Konde ecosystem. It is built from the ground up to be AI-native, meaning both human developers and autonomous AI agents can effortlessly construct UIs by writing strictly-typed JSON schemas rather than dealing with massive, messy HTML/CSS directly.
+The Konde Design Framework is a unified design system that enables rapid, consistent, and beautiful UI development across the Konde ecosystem. It is built to be AI-native, allowing both human developers and autonomous AI agents to construct UIs by writing strictly-typed JSON schemas rather than writing manual HTML/CSS. KDF compiles these schemas into atomic CSS classes and inline custom properties.
 
-## JSON Token Structure
-A typical KDF component is defined using a JSON object with the following schema:
-- `"$"`: The element type or component name (e.g., "button", "card").
-- `"className"`: The base Tailwind utility classes for the component.
-- `"variants"`: A dictionary of style variations (e.g., "default", "destructive", "outline").
-- `"defaultVariants"`: The fallback variants to apply if none are explicitly requested.
+## Project Structure
+- `/designs/`: Contains JSON design token mapping files (e.g. `starter.json`, `layout.json`).
+- `/src/components/`: Reusable Astro layout elements (`Navbar.astro`, `Footer.astro`).
+- `/src/pages/`: Page routing files (`index.astro`, `dashboard.astro`, `about.astro`).
+- `/src/styles/`: Theme-specific stylesheets (`premium.css`, `fonts.css`).
+- `astro.config.mjs`: Astro configuration containing sitemap and path definitions.
 
-### Example: KDF Button
-```json
-{
-  "$": "button",
-  "className": "inline-flex items-center justify-center rounded-lg px-8 py-4 text-sm font-semibold tracking-wide text-white shadow-lg transition-all",
-  "variants": {
-    "default": "bg-green-600 hover:bg-green-700",
-    "destructive": "bg-red-500 hover:bg-red-600"
-  },
-  "defaultVariants": {
-    "variant": "default"
-  }
-}
-```
+## Key Features
+- **KDF Native**: Uses `@kondeio/kdf` to resolve JSON design tokens.
+- **SEO & AI Ready**: Auto-generated XML Sitemap, canonical tags, metadata, and llms.txt context.
+- **Blazing Fast**: Compiles to static HTML with zero client-side JavaScript overhead.
 
-## Developer Resources & Technical Documentation
-For autonomous agents and developers, the full source code and technical documentation are available in our open-source repository:
-- **Main Repository**: [KondeIO/konde-io](https://github.com/KondeIO/konde-io)
-- **README**: [konde-io/README.md](https://github.com/KondeIO/konde-io/blob/main/README.md)
-- **Technical Docs**: [konde-io/docs/](https://github.com/KondeIO/konde-io/tree/main/docs)
+## Developer Resources & Standalone Repositories
+- **Standalone Repository**: [KondeIO/kdf-starter-astro](https://github.com/KondeIO/kdf-starter-astro)
+- **Monorepo Repository**: [KondeIO/konde-io](https://github.com/KondeIO/konde-io)
+- **KDF Core Documentation**: [KDF Doc](https://github.com/KondeIO/kdf/blob/main/docs/doc.md)
+- **Playground**: [KDF Playground](https://playground.konde.io/)
 
 ## Social Links
 - GitHub: https://github.com/KondeIO
 - Twitter (X): https://x.com/KondeIO
-- LinkedIn: https://linkedin.com/company/kondeio
