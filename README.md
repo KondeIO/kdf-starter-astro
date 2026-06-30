@@ -2,8 +2,6 @@
 
 A clean, minimal, framework-agnostic starting point for **KDF (Konde Design Framework)** built with Astro.
 
-[![Deploy to Cloudflare Pages](https://pages.cloudflare.com/deploy/button.svg)](https://deploy.workers.cloudflare.com/?url=https://github.com/KondeIO/kdf-starter-astro)
-
 ## Features
 - **KDF Native**: Uses `@kondeio/kdf` to map JSON design tokens seamlessly.
 - **Framework Agnostic**: No Tailwind required, yet fully supports utility-class patterns.
