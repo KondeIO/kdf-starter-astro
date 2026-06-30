@@ -19,6 +19,7 @@ The Konde Design Framework is a unified design system that enables rapid, consis
 - **Blazing Fast**: Compiles to static HTML with zero client-side JavaScript overhead.
 
 ## Developer Resources & Standalone Repositories
+- **Live Starter Site**: [starter.konde.io](https://starter.konde.io/)
 - **Standalone Repository**: [KondeIO/kdf-starter-astro](https://github.com/KondeIO/kdf-starter-astro)
 - **Monorepo Repository**: [KondeIO/konde-io](https://github.com/KondeIO/konde-io)
 - **KDF Core Documentation**: [KDF Doc](https://github.com/KondeIO/kdf/blob/main/docs/doc.md)

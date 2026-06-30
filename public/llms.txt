@@ -5,6 +5,7 @@
 KDF Starter Astro allows AI agents and human developers to build unified, lightweight, and blazing fast websites using JSON design tokens mapped via the KDF engine.
 
 ## Core Resources
+- [Live Starter Site](https://starter.konde.io/)
 - [Standalone Repository](https://github.com/KondeIO/kdf-starter-astro)
 - [Monorepo Repository](https://github.com/KondeIO/konde-io)
 
