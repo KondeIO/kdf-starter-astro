@@ -6,7 +6,8 @@ import sitemap from '@astrojs/sitemap';
 const DEV_PORT = Number.parseInt(process.env.PORT || '3032', 10) || 3032;
 
 export default defineConfig({
-  site: 'https://konde.io',
+  // Replace with your actual production domain for sitemap generation
+  site: process.env.SITE || 'https://example.com',
   integrations: [sitemap()],
   server: {
     host: true, // Required for Konde Studio tunnel/proxy
