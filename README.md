@@ -1,8 +1,8 @@
-# KDF Starter Template
+# KDF Starter Astro
 
 A clean, minimal, framework-agnostic starting point for **KDF (Konde Design Framework)** built with Astro.
 
-[![Deploy to Cloudflare Pages](https://cloudflare-pages.com/deploy/button.svg)](https://pages.cloudflare.com/deploy)
+[![Deploy to Cloudflare Pages](https://cloudflare-pages.com/deploy/button.svg)](https://deploy.workers.cloudflare.com/?url=https://github.com/KondeIO/kdf-starter-astro)
 
 ## 🚀 Features
 - **KDF Native**: Uses `@kondeio/kdf` to map JSON design tokens seamlessly.
